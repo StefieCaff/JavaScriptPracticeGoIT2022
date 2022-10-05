@@ -2,9 +2,9 @@
 
 // DO NOT REMOVE CODE ABOVE THIS LINE !
 
-// message = "hello world !"
+let message = "hello Jamie ! I love you *heart heart heart*"
 
-// console.log(message);
+console.log(message);
 
 // const message = "JavaScript is awesome!";
 // alert(message);
