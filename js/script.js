@@ -671,19 +671,144 @@
 // calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} })
 
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
-  
-  const blankTask = {...category, ...priority, ...completed};
-  console.log(blankTask);
-  // Change code above this line
-}
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   let text = " ";
+ 
+//     if (data.text === "Take interest") {
+//     const financeTask = {
+//       text: (data.text),
+//       category: (data.category),
+//       priority,
+//       completed,
+//     };
+//     return financeTask;
+//   }
 
-makeTask({});
-makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" });
-makeTask({ category: "Finance", text: "Take interest" });
-makeTask({ priority: "Low", text: "Choose shampoo" });
-makeTask({ text: "Buy bread" });
+//   if (data.text === "Take out the trash") {
+//     const trashTask = {
+//       text: (data.text),
+//       category: (data.category),
+//       priority: (data.priority),
+//       completed,
+//     };
+//     return trashTask;
+//   }
+  
+//       if (data.text === "Choose shampoo") {
+//     const financeTask = {
+//       text: (data.text),
+//       category,
+//       priority: (data.priority),
+//       completed,
+//     };
+//     return shampooTask;
+//   }
+  
+//   const newTask = {
+//    text: (data.text),
+//    category,
+//    priority,
+//    completed,
+//  };
+//   return newTask;
+//   // Change code above this line
+// };
+
+//Same result using SPREAD 
+// function makeTask(data) {
+// 	const completed = false;
+// 	const category = 'General';
+// 	const priority = 'Normal';
+// 	// Change code below this line
+// 	return {
+// 		completed,
+// 		category,
+// 		priority,
+// 		...data,
+//   };
+  
+	// Change code above this line
+//}
+
+// makeTask({});
+// makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" });
+// makeTask({ category: "Finance", text: "Take interest" });
+// makeTask({ priority: "Low", text: "Choose shampoo" });
+// makeTask({ text: "Buy bread" });
+
+
+// // Change code below this line
+// function add(...args) {
+//   let total = 0;
+//   for (const num of args) {
+//     total += num;
+//   }
+
+//  return(total);
+//   // Change code above this line
+// }
+// add(15, 27)
+
+// Change code below this line
+// function findMatches(matchArr, ...otherArgs) {
+//   const matches = []; // Don't change this line
+// for (let i = 0; i < matchArr.length; ++i){
+//   for (let j=0; j < otherArgs.length; ++j){
+//     if (matchArr[i] == otherArgs[j]) {
+//       matches.push(matchArr[i]);
+//     }
+//   }
+// }
+//   // Change code above this line
+//   return matches;
+// }
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2);
+// findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41);
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+ 
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    if (this.potions.includes(newPotion)) {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
+};
+
+
+atTheOldToad.addPotion({ name: "Power potion", price: 270 });
