@@ -816,3 +816,44 @@
 
 // MODULE 4//////////////////////////////////////////////////////////////////////
 
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//  numbers.forEach(greaterArray);
+//     function greaterArray(numbers) {
+//     if (numbers > value) {
+//       filteredNumbers.push(numbers);
+//     }
+//   }
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newArray = [];
+  
+//   numbers.forEach((numbers) => {
+//     if (numbers % 2 === 0) {
+//       newArray.push(numbers + value);
+//     }
+//      if (numbers % 2 !== 0)
+//       newArray.push(numbers);
+//   });
+//   // console.log(newArray);
+//   return newArray;
+//   // Change code above this line
+// };
+
+// changeEven([1, 2, 3, 4, 5], 10);
+// changeEven([2, 8, 3, 7, 4, 6], 10);
+// changeEven([17, 24, 68, 31, 42], 100);
+// changeEven([44, 13, 81, 92, 36, 54], 100);
