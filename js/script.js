@@ -857,3 +857,47 @@
 // changeEven([2, 8, 3, 7, 4, 6], 10);
 // changeEven([17, 24, 68, 31, 42], 100);
 // changeEven([44, 13, 81, 92, 36, 54], 100);
+
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+
+
+// const evenNumbers = numbers => numbers.filter(number => 
+//   (number % 2) === 0);
+
+//incorrect use of arrow
+
+// const evenNumbers = numbers.filter(number => (number % 2) === 0);
+// const oddNumbers = numbers.filter(number => (number % 2) !== 0);
+// console.log(evenNumbers);
+
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+// Iterate over all collection elements and add values of the tags property
+// to the accumulator with an empty array [] as initial value.
+// In each iteration, push all the tweet.tags elements into the accumulator and return it.
+const tags = tweets.reduce((allTags, tweet) => {
+  allTags.push(...tweet.tags);
+
+  return allTags;
+}, []);
+
+console.log(tags);
+
+// Collecting tags is probably not a single operation, so let's write a function
+// to collect tags from the collection
+const getTags = tweets =>
+  tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+
+    return allTags;
+  }, []);
+
+console.log(getTags(tweets));
