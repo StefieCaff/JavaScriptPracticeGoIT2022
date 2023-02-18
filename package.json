@@ -1,21 +1,19 @@
 {
-  "name": "javascriptpracticegoit2022",
+  "name": "javascript-practice-goit-2022",
   "version": "1.0.0",
-  "description": "npm practice",
+  "description": "first init!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "woah this may not be working"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StefieCaff/JavaScriptPracticeGoIT2022.git"
   },
   "keywords": [
-    "javascript",
-    "beginner",
-    "goit"
+    "[]"
   ],
-  "author": "Stefanie",
+  "author": "Stefie Caffarel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StefieCaff/JavaScriptPracticeGoIT2022/issues"
